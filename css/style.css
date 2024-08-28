@@ -1,0 +1,269 @@
+:root{
+    --main-color--:#e65f78;
+    --pargraph-color--:#6c757d;
+    --title-color--:#212529;
+    --main-font--:'Nunito', sans-serif;
+}
+
+.main-color{
+    color: var(--main-color--);
+}
+
+.pargraph-color{
+    color: var(--pargraph-color--);
+}
+.title-color{
+    color: var(--title-color--);
+}
+
+.main-font{
+    font-family: var(--main-font--);
+}
+
+
+.repated-layer{
+    background-color: rgba(0, 0, 0,0.7) ;
+
+}
+
+.repeated-pargraph{
+    font-size: 16px;
+    color: var(--title-color--);
+    font-family: var(--main-font--);
+}
+
+.icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav .nav-link{
+    padding-left: 2rem !important;
+    color: black;
+    transition: all 1s;
+}
+nav .nav-link:hover{
+    color: var(--main-color--) !important;
+}
+nav .active{
+    color: var(--main-color--) !important;
+}
+
+#home{
+    background-image: url(../img/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#home p:nth-of-type(2) {
+    max-width: 500px;
+    color: #ffffffbf;
+}
+
+.side-icon{
+    background-color: #2b2424;
+    position: fixed;
+    left: 0;
+    top: 15%;
+    
+}
+
+.arrow-icon{
+    background-color: var(--main-color--);
+    height: 2rem;
+    width: 2rem;
+    position: fixed;
+    bottom: 0;
+    right: 2%;
+    
+}
+.arrow-icon > button i{
+    transform: translateY(50%);
+    
+
+}
+.mouse-icon{
+    width: 1.75rem;
+    height: 2.8rem;
+    margin-top: 20px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    animation: up-down infinite 1s;
+   
+    
+}
+.mouse-icon::after{
+    content: '';
+    width: 0.1rem;
+    height: 0.5rem;
+    background-color: white;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+}
+
+.title-1{
+    transition: all 2s;
+    animation: title-change infinite  ;
+    
+}
+
+.title-2{
+    position: absolute;
+    right: -110%;
+}
+
+.title-3{
+    position: absolute;
+    right: -110%;
+}
+.dash{
+    position: absolute;
+    right: -110%;
+}
+
+
+.icon-border{
+    border: 2px solid lightgray;
+    border-radius: 100%;
+    transition: all 0.5s;
+    
+}
+#About .container .row  ul li , .icon-border:hover{
+    color: var(--main-color--);
+     border-color:  var(--main-color--);
+}
+
+#About .container .row p{
+    max-width: 550px;
+}
+
+#Services .container > p , #Client .container .clint-head > p ,#Portfolio .container .clint-head > p ,#Blog .container .clint-head > p, #Contact .container .clint-head > p{
+    max-width: 500px;
+
+}
+
+#Services .row .card p{
+    max-width: 300px;
+
+}
+
+#Services .row .card h5{
+    position: relative;
+}
+
+#Services .row .card h5::after{
+    content: '';
+    width: 2.5rem;
+    height: 0.15rem;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--main-color--);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s;
+    
+
+}
+
+#Services .row .card{
+    transition: all 1s;
+}
+
+#Services .row .card:hover  h5::after{
+    width: 3.5rem;
+}
+@keyframes up-down {
+
+    0% {transform: translate(-50%,0);}
+    50%{transform: translate(-50%,-100%);}
+    70% {transform: translate(-50%,20%);}
+    80% {transform: translate(-50%,0%);}
+    100% {transform: translate(-50%,20);}
+}
+#hire-me a{
+    background-color: var(--main-color--);
+}
+.icon-img{
+    width: 7rem;
+}
+#Client .container .carousel-item  p:nth-of-type(1){
+    font-style: italic;
+    font-size: 18px;
+    max-width: 700px;
+}
+.carousel-indicators [data-bs-target]{
+    background-color: var(--main-color--);
+    width: 0.8rem;
+    height: 0.3rem;
+}
+.carousel-indicators .active {
+    transform: scale(1.5);
+}
+.image-container{
+    position: relative;
+    overflow: hidden;
+}
+.image-layer{
+    background-color: rgba(0, 0, 0,0.8);
+    color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 110%;
+    transition: all 0.5s;
+
+}
+.image-layer p{
+    color: #ffffff99;
+    font-size: 14px;
+    margin: 8px 0px;
+}
+.image-layer h4{
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.image-container:hover .image-layer{
+    transform: translate(0% ,-110%);
+}
+
+#Portfolio .container .nav-item button{
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    color: black;
+   
+   
+}
+
+#Portfolio .container .nav-item button:hover{
+    background-color: var(--main-color--);
+    color: white;
+   
+   
+}
+
+#Portfolio .container ul li .active{
+    background-color: var(--main-color--);
+    color: white;
+}
+
+#Contact .container form div button.btn{
+    background-color: var(--main-color--);
+    color: white;
+    padding: 15px 32px;
+
+}
+
+
+
+
+
+
